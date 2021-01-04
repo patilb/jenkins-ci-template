@@ -1,0 +1,16 @@
+pipeline {
+ 
+  agent any
+  stages{
+    stage('Checkout') {
+        steps {
+              git 'https://github.com/patilb/jenkins-ci-template.git'
+          }
+  }
+  stage('Restore packages'){
+   steps{
+      bat "dotnet restore ${WORKSPACE}\src\MyWindowsService\MyWindowsService\MyWindowsService.csproj"
+     }
+  }
+
+}
