@@ -9,7 +9,7 @@ pipeline {
   }
   stage('Restore packages'){
    steps{
-      bat "dotnet restore ${WORKSPACE}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj"
+      bat "dotnet restore ${WORKSPACE}/src/MyWindowsService/MyWindowsService.sln"
      }
   }
   stage('Build'){
