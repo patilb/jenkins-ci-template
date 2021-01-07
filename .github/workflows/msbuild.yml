@@ -23,6 +23,7 @@ jobs:
 
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj
+      run: nuget restore ${{env.GITHUB_WORKSPACE}}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
