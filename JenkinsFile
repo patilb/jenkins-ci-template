@@ -14,7 +14,7 @@ pipeline {
   }
   stage('Build'){
    steps{
-      bat "dotnet build ${WORKSPACE}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj"
+      bat "dotnet build ${WORKSPACE}/src/MyWindowsService/MyWindowsService.sln"
      }
   }
 
