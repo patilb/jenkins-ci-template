@@ -22,8 +22,8 @@ jobs:
       uses: microsoft/setup-msbuild@v1
 
     - name: Restore NuGet packages
-      working-directory: ${{env.GITHUB_WORKSPACE}}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj
-      run: nuget restore ${{env.GITHUB_WORKSPACE}}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj
+      working-directory: ${{env.GITHUB_WORKSPACE}}/src/MyWindowsService/
+      run: nuget restore MyWindowsService.sln
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
