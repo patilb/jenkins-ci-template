@@ -12,6 +12,11 @@ pipeline {
       bat "dotnet restore ${WORKSPACE}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj"
      }
   }
+  stage('Restore packages'){
+   steps{
+      bat "dotnet build ${WORKSPACE}/src/MyWindowsService/MyWindowsService/MyWindowsService.csproj"
+     }
+  }
 
 }
 }
